@@ -1,1 +1,5 @@
-# WebPratikum7
+![alttext](https://github.com/luqman1212/WebPratikum7/blob/main/pho%201.png?rawtext)
+![alttext](https://github.com/luqman1212/WebPratikum7/blob/main/pho%202.png?rawtext)
+![alttext](https://github.com/luqman1212/WebPratikum7/blob/main/pho%203.png?rawtext)
+![alttext](https://github.com/luqman1212/WebPratikum7/blob/main/pho%204.png?rawtext)
+![alttext](https://github.com/luqman1212/WebPratikum7/blob/main/vid%202.gif?rawtext)
