@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5e9d9; /* Warna latar belakang cokelat kayu yang hangat */
+    color: #4a3c31; /* Warna teks cokelat tua */
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(117, 89, 117, 0.19); /* Overlay gelap untuk keterbacahan */
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    background-color: #6e3f68; /* Cokelat kayu tua */
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #eacee4; /* Warna logo kontras dengan latar */
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav ul li {
+    margin-left: 20px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #f5e9d9;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav ul li a:hover {
+    color: #ffcc80; /* Warna kuning lembut saat hover */
+}
+
+/* Intro Section */
+.intro {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.intro h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #320622; /* Warna cokelat-oranye untuk judul */
+}
+
+.intro p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Menu Slider */
+.menu-slider {
+    overflow: hidden;
+    padding: 20px 0;
+    background-color: #612535; /* Latar belakang krem untuk kontras */
+}
+
+.slider-wrapper {
+    width: 100%;
+}
+
+.slider {
+    display: flex;
+    animation: slide-right 20s linear infinite; /* Animasi CSS dengan durasi 20 detik */
+}
+
+@keyframes slide-right {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Bergerak hingga setengah panjang (karena ada duplikat) */
+    }
+}
+
+.menu-item {
+    flex: 0 0 300px; /* Lebar tetap untuk setiap item */
+    margin: 0 15px;
+    background-color: #d8c7c7;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s;
+    cursor: pointer; /* Menunjukkan bahwa item dapat diklik */
+}
+
+.menu-item:hover {
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.menu-item .shift-up {
+    position: relative;
+    top: -20px; /* Geser gambar ke atas sebanyak 20px */
+}
+
+.menu-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    color: #2d0521;
+}
+
+.menu-item p {
+    font-size: 0.9rem;
+    color: #451414;
+}
+
+/* Pop-up */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #d8c7c7;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    text-align: center;
+}
+
+.popup-content img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.popup-content h3 {
+    font-size: 1.5rem;
+    color: #2d0521;
+    margin-bottom: 10px;
+}
+
+.popup-content p {
+    font-size: 1rem;
+    color: #451414;
+    line-height: 1.5;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #2d0521;
+}
+
+/* Footer */
+.footer {
+    background-color: #71184c;
+    color: #f5e9d9;
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .intro h2 {
+        font-size: 2rem;
+    }
+
+    .menu-item {
+        flex: 0 0 250px; /* Lebih kecil untuk layar kecil */
+    }
+
+    .popup-content {
+        max-width: 90%;
+    }
+}
